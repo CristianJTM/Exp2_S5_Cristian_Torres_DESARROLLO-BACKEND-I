@@ -10,7 +10,7 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String name;
     private String description;
     private boolean active;
@@ -18,18 +18,18 @@ public class Course {
     public Course(){
 
     }
-    public Course(long id, String name, String description, boolean active){
+    public Course(Long id, String name, String description, boolean active){
         this.id = id;
         this.name = name;
         this.description = description;
         this.active = active;
     }
 
-    public long getId(){
+    public Long getId(){
         return id;
     }
 
-    public void setId(long id){
+    public void setId(Long id){
         this.id = id;
     }
 
