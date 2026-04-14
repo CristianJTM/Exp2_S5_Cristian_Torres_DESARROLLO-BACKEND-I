@@ -1,12 +1,13 @@
 package com.duoc.LearningPlatform.repository;
 
-import com.duoc.LearningPlatform.model.Course;
-import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+
+import org.springframework.stereotype.Repository;
+
+import com.duoc.LearningPlatform.model.Course;
 
 // Se utiliza un repositorio en memoria con ArrayList para simular persistencia,
 // cumpliendo con el requisito de usar estructuras de almacenamiento temporal.
@@ -16,7 +17,7 @@ import java.util.Optional;
 @Repository
 public class CourseRepository {
 
-    private List<Course> courses = new ArrayList<>();
+    private final List<Course> courses = new ArrayList<>();
     private Long currentId = 1L;
 
 

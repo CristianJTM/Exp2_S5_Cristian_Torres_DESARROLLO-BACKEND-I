@@ -1,10 +1,11 @@
 package com.duoc.LearningPlatform.config;
 
-import com.duoc.LearningPlatform.model.Course;
-import com.duoc.LearningPlatform.repository.CourseRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.duoc.LearningPlatform.model.Course;
+import com.duoc.LearningPlatform.repository.CourseRepository;
 
 @Configuration
 public class DataLoader {

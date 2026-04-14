@@ -1,11 +1,12 @@
 package com.duoc.LearningPlatform.service;
 
-import com.duoc.LearningPlatform.model.Course;
-import com.duoc.LearningPlatform.repository.CourseRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.duoc.LearningPlatform.model.Course;
+import com.duoc.LearningPlatform.repository.CourseRepository;
 
 @Service
 public class CourseService {
@@ -27,7 +28,8 @@ public class CourseService {
     }
 
     public Course getCourseById(Long id){
-        return courseRepository.findById(id).orElse(null);
+        return courseRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Course not found"));
     }
 
     public void deleteCourse(Long id){
