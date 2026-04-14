@@ -25,7 +25,7 @@ La aplicación se iniciará en:
 ```bash
 http://localhost:8080
 ```
-Arquitectura del proyecto
+## Arquitectura del proyecto
 
 El proyecto sigue una arquitectura en capas para separar responsabilidades.
 ```bash
@@ -76,7 +76,7 @@ Contiene DataLoader, encargado de cargar datos iniciales al iniciar la aplicaci�
 ## Modelo de datos
 
 Curso:
-```bash
+```json
 {
   "id": 1,
   "name": "Java Básico",
@@ -85,20 +85,20 @@ Curso:
 }
 ```
 
-|    Campo    |            Descripción            |
-|:-----------:|:---------------------------------:|
-| id          | Identificador del curso           |
-| name        | Nombre del curso                  |
-| description | Descipción del contenido          |
-| active      | Indica si el cuso está disponible |
+|    Campo    |            Descripción             |
+|:-----------:|:----------------------------------:|
+| id          |      Identificador del curso       |
+| name        |          Nombre del curso          |
+| description |     Descripción del contenido      |
+| active      | Indica si el curso está disponible |
 
 ## Lógica de negocio implementada
 
 El servicio aplica las siguientes reglas:
 
-    1. Solo se muestran cursos activos.
-    2. Los cursos se ordenan alfabéticamente por nombre.
-    3. El ordenamiento ignora mayúsculas y minúsculas.
+1. Solo se muestran cursos activos.
+2. Los cursos se ordenan alfabéticamente por nombre.
+3. El ordenamiento ignora mayúsculas y minúsculas.
 
 Esto se implementa utilizando Streams de Java.
 
@@ -122,7 +122,7 @@ Devuelve la lista de cursos activos ordenados alfabéticamente.
 http://localhost:8080/api/courses
 ```
 #### Respuesta
-```bash
+```json
 [
   {
     "id": 7,
@@ -169,7 +169,7 @@ POST
 /api/courses
 ```
 #### Ejemplo Body
-```bash
+```json
 {
   "name": "Docker",
   "description": "Contenedores",
@@ -207,7 +207,7 @@ El API implementa manejo básico de errores utilizando:
 - códigos HTTP apropiados
 
 Ejemplo de error:
-```bash
+```json
 {
   "message": "Course not found"
 }
