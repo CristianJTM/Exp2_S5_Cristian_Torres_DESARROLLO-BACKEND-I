@@ -15,6 +15,11 @@ public class DataLoader {
             courseRepository.save(new Course(null, "Java Básico", "Intro a Java", true));
             courseRepository.save(new Course(null, "Spring Boot", "Microservicios", true));
             courseRepository.save(new Course(null, "Python", "Fundamentos", false));
+            courseRepository.save(new Course(null, "Angular", "Frontend", true));
+            courseRepository.save(new Course(null, "docker", "Contenedores", true));
+            courseRepository.save(new Course(null, "C++", "Programación avanzada", true));
+            courseRepository.save(new Course(null, "algoritmos", "Lógica", true));
+            courseRepository.save(new Course(null, "Base de Datos", "SQL", true));
         };
     }
 }
